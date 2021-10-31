@@ -15,7 +15,7 @@ public class MovieLookUpApplication {
 
 	@GetMapping("/getMovie")
 	public String movieInfo() {
-		Film film = new Film("Ironman, Age of Ultron", "Ironman fights robots", 2017, "English", 188, 8);
+		Film film = new Film("Ironman, Age of Ultron","Ironman fights robots",2017,"English",188,8);
 		return film.getJsonObjectOfFilm();
 	}
 
