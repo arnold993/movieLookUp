@@ -1,6 +1,7 @@
 package com.movies.MovieLookUp;
 
 public class Film {
+
     private String title;
     private String description;
     private int release_year;
@@ -34,5 +35,17 @@ public class Film {
 
     public int getRating() { return rating;}
     public void  setRating(int rating) {this.rating = rating;}
+
+
+    public String getJsonObjectOfFilm() {
+        return "{" +
+                "\"Title\" : \" " + title + "\"," +
+                "\" Description\" : \" " + description + "\"" +
+                "\" Year of release\" : \" " + release_year + "\"" +
+                "\" Language of movie\" : \" " + language + "\"" +
+                "\" Duration\" : \" " + duration + "\"" +
+                "\" Rating\" : \" " + rating + "\"" +
+                "}";
+    }
 
 }
