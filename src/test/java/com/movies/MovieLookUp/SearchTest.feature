@@ -17,24 +17,23 @@ Feature: Can I leave a comment on a movie
 
   Scenario: Leave review on a movie
     Given I am on the selected movie
-    When I write a review
-    Then I should see a comment say "Thank you for your review"
+    When I write a review on the title "Avengers Endgame Part 3"
+    Then I should see the review added to the title "Avengers Endgame Part 3"
 
 
 Feature: Add new movie for the database
   As a staff member, I want to a new movie named "Avengers Endgame part 3" to the database, so people know about it
 
-  Scenario: Add Avengers Endgame part 3 to the database
+  Scenario: Add "Avengers Endgame part 3" to the database
     Given I am on the form page
     And I fill all the fields
     When I select "add"
     Then I should be shown the movie added to the list
 
-  Scenario: No movies with Johnny Depp
+  Scenario: "Avengers Endgame part 3" not added to the database
     Given I am on the search page
-    And I selected search by actor
-    When I search for "Johnny Depp"
-    Then I should be told "there are no movies with Johnny Depp"
+    When I search for "Avengers Endgame part 3"
+    Then I should be told "Movie not found"
 
 
 Feature: What is the best movie now
@@ -47,18 +46,11 @@ Feature: What is the best movie now
     Then I should be shown a list of movies ordered by rating
 
 
-Feature: I want to watch a movie released in 1988
-  As a movie expert, I want to look for a movie released in 1988 for research purposes
+Feature: I want to remove "Avengers Endgame part 3"
+  As a staff member, I want to remove "Avengers Endgame part 3" from the database so then I can
 
-  Scenario: Show list of movies released in 1988
-    Given That I am on the search page
-    And I select search by year
-    When I select search
-    Then I should be shown a list of movies released only in 1988
-
-  Scenario: No movies released in 1988
-    Given That I am on the search page
-    And I select search by year
-    When I select search
-    Then I should be told "There are no movies in our database released in 1988"
+  Scenario: Delete "Avengers Endgame part 3"
+    Given That I deleted "Avengers Endgame part 3"
+    When I search for "Avengers Endgame part 3"
+    Then No result should appear
 
