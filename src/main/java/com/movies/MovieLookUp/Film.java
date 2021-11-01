@@ -1,6 +1,15 @@
 package com.movies.MovieLookUp;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+@Entity
 public class Film {
+
+    @Id
+    @GeneratedValue(strategy=GenerationType.TABLE)
+    private int id;
 
     private String title;
     private String description;
@@ -16,6 +25,10 @@ public class Film {
         this.language = language;
         this.duration = duration;
         this.rating = rating;
+    }
+
+    public Film() {
+
     }
 
     public String getTitle() { return title;}
@@ -36,8 +49,12 @@ public class Film {
     public int getRating() { return rating;}
     public void  setRating(int rating) {this.rating = rating;}
 
+    public void setId(int id) {
+        this.id = id;
+    }
 
-    public String getJsonObjectOfFilm() {
+
+  /*  public String getJsonObjectOfFilm() {
         return "{" +
                 "\"Title\" : \" " + title + "\"," +
                 "\" Description\" : \" " + description + "\"" +
@@ -47,5 +64,7 @@ public class Film {
                 "\" Rating\" : \" " + rating + "\"" +
                 "}";
     }
+
+   */
 
 }
