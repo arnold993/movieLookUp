@@ -1,15 +1,12 @@
 package com.movies.MovieLookUp;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
+@Table(name = "film")
 public class Film {
 
     @Id
-    @GeneratedValue(strategy=GenerationType.TABLE)
-    private int id;
+    private int film_id;
 
     private String title;
     private String description;
@@ -50,7 +47,7 @@ public class Film {
     public void  setRating(int rating) {this.rating = rating;}
 
     public void setId(int id) {
-        this.id = id;
+        this.film_id = id;
     }
 
 
