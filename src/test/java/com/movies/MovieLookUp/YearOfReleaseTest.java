@@ -8,6 +8,6 @@ public class YearOfReleaseTest {
     @Test
     public void testYearOfRelease() {
         Film yearOfRelease = new Film("Ironman, Age of Ultron", "Ironman fights robots", 2017, "English", 188, 8);
-        assertEquals("Try another year", "2017", yearOfRelease.getTitle());
+        assertEquals("Try another year", 2017, yearOfRelease.getRelease_year());
     }
 }
