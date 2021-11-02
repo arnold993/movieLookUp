@@ -17,6 +17,7 @@
 		<java.version>17</java.version>
 		<sonar.organization>arnold993</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.login>48cbc23309f20a2673467c52bd644721c624b4d9</sonar.login>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -89,6 +90,7 @@
 			<artifactId>jacoco-maven-plugin</artifactId>
 			<version>0.8.7</version>
 		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
