@@ -19,7 +19,7 @@ private FilmRepository filmRepository;
 
 	@GetMapping("/all")
 	public @ResponseBody
-	Iterable<Film> getAllUser() {
+	Iterable<Film> getAllFilm() {
 		return filmRepository.findAll();
 	}
 
