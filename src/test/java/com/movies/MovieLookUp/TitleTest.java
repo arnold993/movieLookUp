@@ -1,4 +1,4 @@
-/*package com.movies.MovieLookUp;
+package com.movies.MovieLookUp;
 
 import org.junit.Test;
 
@@ -11,4 +11,3 @@ public class TitleTest {
         assertEquals("Movie title not found", "Ironman, Age of Ultron", titleOfMovie.getTitle());
     }
 }
-*/
