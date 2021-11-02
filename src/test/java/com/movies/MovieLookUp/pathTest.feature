@@ -53,4 +53,3 @@ Feature: I want to remove "Avengers Endgame part 3"
     Given That I deleted "Avengers Endgame part 3"
     When I search for "Avengers Endgame part 3"
     Then No result should appear
-

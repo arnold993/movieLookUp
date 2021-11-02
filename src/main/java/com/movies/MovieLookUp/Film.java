@@ -6,6 +6,7 @@ import javax.persistence.*;
 public class Film {
 
     @Id
+    //   @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int film_id;
 
     private String title;
@@ -46,6 +47,7 @@ public class Film {
     public int getRating() { return rating;}
     public void  setRating(int rating) {this.rating = rating;}
 
+    public int getFilm_id() { return film_id;}
     public void setId(int id) {
         this.film_id = id;
     }
