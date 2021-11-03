@@ -8,7 +8,6 @@ public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int film_id;
-
     private String title;
     private String description;
     private int release_year;
@@ -16,7 +15,8 @@ public class Film {
     private int duration;
     private String rating;
 
-    public Film (String title, String description, int release_year, int language_id, int duration, String rating){
+    public Film (int film_id, String title, String description, int release_year, int language_id, int duration, String rating){
+        this.film_id= film_id;
         this.title = title;
         this.description = description;
         this.release_year = release_year;
