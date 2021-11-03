@@ -26,12 +26,12 @@ public class UnitTests {
     @Test
     public void ratingOfMovie() {
         Film rating = new Film("Ironman, Age of Ultron", "Ironman fights robots", 2017, 1, 188, "PG");
-        assertEquals("Movie with that duration not found", 8, rating.getRating());
+        assertEquals("Movie with that duration not found", "PG", rating.getRating());
     }
 
     @Test
     public void testRating() {
         Film rating = new Film("Ironman, Age of Ultron", "Ironman fights robots", 2017, 1, 188, "PG");
-        assertEquals("movie with that rating not found", 8, rating.getRating());
+        assertEquals("movie with that rating not found", "PG", rating.getRating());
     }
 }
