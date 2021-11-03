@@ -17,20 +17,20 @@ public class MovieLookUpApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MovieLookUpApplication.class, args);
 	}
-
+// Used to find all movies
 	@GetMapping("/all")
 	public @ResponseBody
 	Iterable<Film> getAllFilm() {
 		return filmRepository.findAll();
 	}
-
+//Used to search titles by name
 	//	@RequestMapping("/searchFilm")
 	@RequestMapping(value = "/searchFilm", method = GET)
 	public @ResponseBody
 	Iterable<Film> searchFilm(@RequestParam("title") String title) {
 		return filmRepository.searchByTitle(title);
 	}
-
+//Used to add movies
 	@PostMapping("/addMovie")
 	public @ResponseBody
 	String addAMovie(@RequestParam String title,
