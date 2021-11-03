@@ -5,6 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 
 @RestController
@@ -49,21 +51,28 @@ public class MovieLookUpApplication {
 	}
 
 
+	@PutMapping("/updateMovie")
+		public @ResponseBody
+		String updateAMovie(@RequestParam int film_id,
+						 @RequestParam String description)
+	 {
+			var updateFilm  = filmRepository.findById(film_id).get();
+			updateFilm.setDescription(description);
+			filmRepository.save(updateFilm);
+			return "Updated, thank you";
 
+		}
 
-/*	@PutMapping("/updateMovie")
+	@DeleteMapping("/deleteMovie")
 	public @ResponseBody
-	String updateAMovie(@RequestParam int film_id,
-					 @RequestParam String description)
- {
-		Film updateFilm = filmRepository.findById(film_id);
-		updateFilm.setDescription(description);
-	 	filmRepository.save(updateFilm);
-		return "Updated, thank you";
+	String deleteMovie(@RequestParam int film_id)
+	{
+		var deleteFilm  = filmRepository.findById(film_id).get();
+		filmRepository.delete(deleteFilm);
+		return "Movie has been deleted";
 
 	}
 
- */
 }
 
 
