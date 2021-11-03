@@ -12,15 +12,15 @@ public class Film {
     private String title;
     private String description;
     private int release_year;
-    private String language;
+    private int language_id;
     private int duration;
-    private int rating;
+    private String rating;
 
-    public Film (String title, String description, int release_year, String language, int duration, int rating){
+    public Film (String title, String description, int release_year, int language_id, int duration, String rating){
         this.title = title;
         this.description = description;
         this.release_year = release_year;
-        this.language = language;
+        this.language_id = language_id;
         this.duration = duration;
         this.rating = rating;
     }
@@ -38,14 +38,14 @@ public class Film {
     public int getRelease_year() { return release_year;}
     public void  setRelease_year(int release_year) {this.release_year = release_year;}
 
-    public String getLanguage() { return language;}
-    public void  setLanguage(String language) {this.language = language;}
+    public int getLanguage() { return language_id;}
+    public void  setLanguage(int language) {this.language_id = language;}
 
     public int getDuration() { return duration;}
     public void  setDuration(int duration) {this.duration = duration;}
 
-    public int getRating() { return rating;}
-    public void  setRating(int rating) {this.rating = rating;}
+    public String getRating() { return rating;}
+    public void  setRating(String rating) {this.rating = rating;}
 
     public int getFilm_id() { return film_id;}
     public void setId(int id) {
