@@ -43,8 +43,7 @@ public class MovieLookUpApplication {
 
 		Film savedFilm = new Film(title, description, yearOfRelease, language_id, duration, rating);
 		filmRepository.save(savedFilm);
-		return "Film added, thank you";
-
+		return "New film added, thank you";
 	}
 
 /*	@PutMapping("/updateMovie")
