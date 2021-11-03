@@ -24,7 +24,7 @@ public class Film {
         this.duration = duration;
         this.rating = rating;
     }
-
+//Default constructor
     public Film() {
 
     }
