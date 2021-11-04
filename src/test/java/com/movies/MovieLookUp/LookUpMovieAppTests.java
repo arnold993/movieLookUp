@@ -3,9 +3,12 @@ package com.movies.MovieLookUp;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-public class ContextConfig {
+
+
+@SpringBootTest
+public class LookUpMovieAppTests {
     @Test
-    void contextLoad() {
+    void contextConfig() {
 
     }
 }
