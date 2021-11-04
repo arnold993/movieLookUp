@@ -23,7 +23,7 @@ public class UnitTest {
     }
 
     @Test
-    public void ratingOfMovie() {
+    void ratingOfMovie() {
         Film rating = new Film(1001, "Ironman, Age of Ultron", "Ironman fights robots", 2017, 1, 188, "PG");
         assertEquals( "PG", rating.getRating(), "Wrong rating");
     }
@@ -35,7 +35,7 @@ public class UnitTest {
     }
 
     @Test
-    public void testLanguageId() {
+    void testLanguageId() {
         Film languageId = new Film(1001, "Ironman, Age of Ultron", "Ironman fights robots", 2017, 1, 188, "PG");
         assertEquals(1, languageId.getLanguage(), "Choose right language");
     }
