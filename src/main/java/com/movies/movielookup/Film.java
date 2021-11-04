@@ -7,20 +7,28 @@ public class Film {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int film_id;
+    @Column(name="film_id")
+    private int filmId;
+
     private String title;
+
     private String description;
-    private int release_year;
-    private int language_id;
+
+    @Column(name="release_year")
+    private int releaseYear;
+
+    @Column(name="language_id")
+    private int languageId;
+
     private int duration;
     private String rating;
 
     public Film (int film_id, String title, String description, int release_year, int language_id, int duration, String rating){
-        this.film_id= film_id;
+        this.filmId= film_id;
         this.title = title;
         this.description = description;
-        this.release_year = release_year;
-        this.language_id = language_id;
+        this.releaseYear = release_year;
+        this.languageId = language_id;
         this.duration = duration;
         this.rating = rating;
     }
@@ -35,11 +43,11 @@ public class Film {
     public String getDescription() { return description;}
     public void  setDescription(String description) {this.description = description;}
 
-    public int getRelease_year() { return release_year;}
-    public void  setRelease_year(int release_year) {this.release_year = release_year;}
+    public int getRelease_year() { return releaseYear;}
+    public void  setRelease_year(int release_year) {this.releaseYear = release_year;}
 
-    public int getLanguage() { return language_id;}
-    public void  setLanguage(int language) {this.language_id = language;}
+    public int getLanguage() { return languageId;}
+    public void  setLanguage(int language) {this.languageId = language;}
 
     public int getDuration() { return duration;}
     public void  setDuration(int duration) {this.duration = duration;}
@@ -47,9 +55,9 @@ public class Film {
     public String getRating() { return rating;}
     public void  setRating(String rating) {this.rating = rating;}
 
-    public int getFilm_id() { return film_id;}
+    public int getFilm_id() { return filmId;}
     public void setId(int id) {
-        this.film_id = id;
+        this.filmId = id;
     }
 
 
