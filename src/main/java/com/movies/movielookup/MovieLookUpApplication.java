@@ -34,16 +34,16 @@ public class MovieLookUpApplication {
 	@PostMapping("/addMovie")
 	public @ResponseBody
 	String addAMovie(
-					 @RequestParam int film_id,
+					 @RequestParam int filmId,
 					 @RequestParam String title,
 					 @RequestParam String description,
 					 @RequestParam int yearOfRelease,
-					 @RequestParam int language_id,
+					 @RequestParam int languageId,
 					 @RequestParam int duration,
 					 @RequestParam String rating) {
 
 
-		Film savedFilm = new Film(film_id, title, description, yearOfRelease, language_id, duration, rating);
+		Film savedFilm = new Film(filmId, title, description, yearOfRelease, languageId, duration, rating);
 		filmRepository.save(savedFilm);
 		return "New film added, thank you";
 	}
@@ -51,10 +51,10 @@ public class MovieLookUpApplication {
 //movie update
 	@PutMapping("/updateMovie")
 		public @ResponseBody
-		String updateAMovie(@RequestParam int film_id,
+		String updateAMovie(@RequestParam int filmId,
 						 @RequestParam String description)
 	 {
-			var updateFilm  = filmRepository.findById(film_id).get();
+			var updateFilm  = filmRepository.findById(filmId).get();
 			updateFilm.setDescription(description);
 			filmRepository.save(updateFilm);
 			return "Updated, thank you";
@@ -63,9 +63,9 @@ public class MovieLookUpApplication {
 
 	@DeleteMapping("/deleteMovie")
 	public @ResponseBody
-	String deleteMovie(@RequestParam int film_id)
+	String deleteMovie(@RequestParam int filmId)
 	{
-		var deleteFilm  = filmRepository.findById(film_id).get();
+		var deleteFilm  = filmRepository.findById(filmId).get();
 		filmRepository.delete(deleteFilm);
 		return "Movie has been deleted";
 

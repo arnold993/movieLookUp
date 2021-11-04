@@ -23,12 +23,12 @@ public class Film {
     private int duration;
     private String rating;
 
-    public Film (int film_id, String title, String description, int release_year, int language_id, int duration, String rating){
+    public Film (int film_id, String title, String description, int releaseYear, int languageId, int duration, String rating){
         this.filmId= film_id;
         this.title = title;
         this.description = description;
-        this.releaseYear = release_year;
-        this.languageId = language_id;
+        this.releaseYear = releaseYear;
+        this.languageId = languageId;
         this.duration = duration;
         this.rating = rating;
     }
