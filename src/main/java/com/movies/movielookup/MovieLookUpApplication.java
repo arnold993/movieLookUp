@@ -25,7 +25,7 @@ public class MovieLookUpApplication {
 	}
 //Used to search titles by name
 	//	@RequestMapping("/searchFilm")
-	@RequestMapping(value = "/searchFilm", method = GET)
+	@GetMapping(value = "/searchFilm")
 	public @ResponseBody
 	Iterable<Film> searchFilm(@RequestParam("title") String title) {
 		return filmRepository.searchByTitle(title);
@@ -72,11 +72,5 @@ public class MovieLookUpApplication {
 	}
 
 }
-
-
-/*		Film film = new Film("Ironman, Age of Ultron","Ironman fights robots",2017,"English",188,8);
-		return film.getJsonObjectOfFilm();
-	}
-*/
 
 
