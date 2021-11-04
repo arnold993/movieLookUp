@@ -1,4 +1,4 @@
-package com.movies.MovieLookUp;
+package com.movies.movielookup;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;

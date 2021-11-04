@@ -1,4 +1,4 @@
-package com.movies.MovieLookUp;
+package com.movies.movielookup;
 import javax.persistence.*;
 
 @Entity

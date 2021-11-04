@@ -1,4 +1,4 @@
-package com.movies.MovieLookUp;
+package com.movies.movielookup;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;

@@ -1,11 +1,9 @@
-package com.movies.MovieLookUp;
+package com.movies.movielookup;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
 
 import static org.springframework.web.bind.annotation.RequestMethod.GET;
 

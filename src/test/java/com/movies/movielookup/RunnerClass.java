@@ -1,11 +1,8 @@
-package com.movies.MovieLookUp;
+package com.movies.movielookup;
 
 import io.cucumber.junit.Cucumber;
 import cucumber.api.CucumberOptions;
 import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.ConfigFileApplicationContextInitializer;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 
 @RunWith(Cucumber.class)
 

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.movies</groupId>
-	<artifactId>MovieLookUp</artifactId>
+	<artifactId>movielookup</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>MovieLookUp</name>
 	<description>project to search for movies</description>
