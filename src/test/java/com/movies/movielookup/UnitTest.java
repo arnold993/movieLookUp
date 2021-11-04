@@ -13,7 +13,7 @@ public class UnitTest {
     @Test
     public void testYearOfRelease() {
         Film yearOfRelease = new Film(1001, "Ironman, Age of Ultron", "Ironman fights robots", 2017, 1, 188, "PG");
-        assertEquals(2017, yearOfRelease.getRelease_year(), "Choose another year");
+        assertEquals(2017, yearOfRelease.getReleaseYear(), "Choose another year");
     }
 
     @Test
@@ -31,7 +31,7 @@ public class UnitTest {
     @Test
     public void testFilmId() {
         Film filmId = new Film(1001, "Ironman, Age of Ultron", "Ironman fights robots", 2017, 1, 188, "PG");
-        assertEquals( 1001, filmId.getFilm_id(),"Wrong ID");
+        assertEquals( 1001, filmId.getFilmId(),"Wrong ID");
     }
 
     @Test
@@ -64,22 +64,22 @@ public class UnitTest {
     @Test
     public void testSetReleaseYear() {
         Film filmYearOfRelease = new Film();
-        filmYearOfRelease.setRelease_year(2021);
-        assertEquals(2021,2021,filmYearOfRelease.getRelease_year());
+        filmYearOfRelease.setReleaseYear(2021);
+        assertEquals(2021,2021,filmYearOfRelease.getReleaseYear());
     }
 
     @Test
     public void testSetLanguageId() {
-        Film language_id = new Film();
-        language_id.setLanguage(2);
-        assertEquals(2,2,language_id.getLanguage());
+        Film languageId = new Film();
+        languageId.setLanguage(2);
+        assertEquals(2,2,languageId.getLanguage());
     }
 
     @Test
     public void testSetFilmId() {
-        Film film_id = new Film();
-        film_id.setId(1001);
-        assertEquals(1001,1001,film_id.getFilm_id());
+        Film filmId = new Film();
+        filmId.setId(1001);
+        assertEquals(1001,1001,filmId.getFilmId());
     }
 
     @Test

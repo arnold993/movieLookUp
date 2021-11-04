@@ -43,8 +43,8 @@ public class Film {
     public String getDescription() { return description;}
     public void  setDescription(String description) {this.description = description;}
 
-    public int getRelease_year() { return releaseYear;}
-    public void  setRelease_year(int release_year) {this.releaseYear = release_year;}
+    public int getReleaseYear() { return releaseYear;}
+    public void  setReleaseYear(int release_year) {this.releaseYear = release_year;}
 
     public int getLanguage() { return languageId;}
     public void  setLanguage(int language) {this.languageId = language;}
@@ -55,7 +55,7 @@ public class Film {
     public String getRating() { return rating;}
     public void  setRating(String rating) {this.rating = rating;}
 
-    public int getFilm_id() { return filmId;}
+    public int getFilmId() { return filmId;}
     public void setId(int id) {
         this.filmId = id;
     }
