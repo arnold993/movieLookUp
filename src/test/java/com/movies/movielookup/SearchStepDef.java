@@ -11,7 +11,7 @@ import java.util.List;
 import static org.junit.Assert.assertEquals;
 
 @SpringBootTest
-public class SearchTest {
+public class SearchStepDef {
 
     @Autowired
 

@@ -5,10 +5,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 
 
-@SpringBootTest
-public class LookUpMovieAppTests {
-    @Test
+/*@SpringBootTest
+ class LookUpMovieAppTests
+ {
+   @Test
     void contextConfig() {
 
     }
-}
+}*/
