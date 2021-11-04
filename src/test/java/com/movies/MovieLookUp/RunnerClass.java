@@ -8,7 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 
 @RunWith(Cucumber.class)
-@ContextConfiguration
+
 @CucumberOptions(plugin = {"pretty", "html:target/cucumber"},
         features = {"src/test/resources/feature"})
 
