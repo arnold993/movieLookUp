@@ -23,8 +23,8 @@ public class Film {
     private int duration;
     private String rating;
 
-    public Film (int film_id, String title, String description, int releaseYear, int languageId, int duration, String rating){
-        this.filmId= film_id;
+    public Film (int filmId, String title, String description, int releaseYear, int languageId, int duration, String rating){
+        this.filmId= filmId;
         this.title = title;
         this.description = description;
         this.releaseYear = releaseYear;
@@ -44,7 +44,7 @@ public class Film {
     public void  setDescription(String description) {this.description = description;}
 
     public int getReleaseYear() { return releaseYear;}
-    public void  setReleaseYear(int release_year) {this.releaseYear = release_year;}
+    public void  setReleaseYear(int releaseYear) {this.releaseYear = releaseYear;}
 
     public int getLanguage() { return languageId;}
     public void  setLanguage(int language) {this.languageId = language;}
@@ -59,19 +59,5 @@ public class Film {
     public void setId(int id) {
         this.filmId = id;
     }
-
-
-  /*  public String getJsonObjectOfFilm() {
-        return "{" +
-                "\"Title\" : \" " + title + "\"," +
-                "\" Description\" : \" " + description + "\"" +
-                "\" Year of release\" : \" " + release_year + "\"" +
-                "\" Language of movie\" : \" " + language + "\"" +
-                "\" Duration\" : \" " + duration + "\"" +
-                "\" Rating\" : \" " + rating + "\"" +
-                "}";
-    }
-
-   */
 
 }
