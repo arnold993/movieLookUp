@@ -16,7 +16,6 @@ import static org.junit.Assert.assertEquals;
 public class SearchStepDef {
 
     @Autowired
-
     private FilmRepository filmRepository;
     private Film film;
 

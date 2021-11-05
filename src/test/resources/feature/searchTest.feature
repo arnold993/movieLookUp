@@ -6,7 +6,7 @@ Feature: Is Cider Desire available to watch
     When I search for "CIDER DESIRE"
     Then I should be told "CIDER DESIRE" is available
 
-#  Scenario: Avengers Endgame part 3 is not available
- #   Given that i am on the search page
-  #  When I search for "CIDER DESIRE"
-   # Then I should be told CIDER DESIRE does not exist"
+ # Scenario: CIDER DESIRE is not available
+  #  Given that i am on the search page
+   # When I search for "CIDER DESIRE"
+    #Then I should be told CIDER DESIRE does not exist"
