@@ -1,4 +1,4 @@
-Feature: Is Avengers Endgame part 3 available to watch
+Feature: Is Cider Desire available to watch
   As a web browser, I want to search for a movie to watch so then I can go and cinema it
 
   Scenario: "CIDER DESIRE" is available

@@ -3,6 +3,7 @@ package com.movies.movielookup;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -10,6 +11,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
+@CucumberContextConfiguration
 @SpringBootTest
 public class SearchStepDef {
 
@@ -19,7 +21,6 @@ public class SearchStepDef {
     private Film film;
 
     private List<Film> answer;
-    private String titleOfFilm;
 
     @Given("that i am on the search page")
     public void isAvailable() {;
@@ -32,7 +33,7 @@ public class SearchStepDef {
 
     @Then("I should be told {string} is available")
     public Film iShouldBeTold(String title) {
-        assertEquals(answer.get(0).getTitle(), titleOfFilm);
+        assertEquals(answer.get(0).getTitle(), title);
         return answer.get(0);
     }
 }
