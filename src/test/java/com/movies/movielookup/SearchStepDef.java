@@ -11,7 +11,7 @@ import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-@CucumberContextConfiguration
+
 @SpringBootTest
 public class SearchStepDef {
 
@@ -35,4 +35,5 @@ public class SearchStepDef {
         assertEquals(answer.get(0).getTitle(), title);
         return answer.get(0);
     }
+
 }

@@ -58,7 +58,7 @@ public class MovieLookUpApplication {
 			return "Updated, thank you";
 
 		}
-
+//Used to delete movie
 	@DeleteMapping("/deleteMovie")
 	public @ResponseBody
 	String deleteMovie(@RequestParam int filmId)

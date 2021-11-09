@@ -1,3 +1,4 @@
+/*
 package com.movies.movielookup;
 
 
@@ -24,14 +25,13 @@ public class AppConfig {
     private String secretKey;
 
 
-    @Bean
     public DataSource dataSource (){
 
         AwsSecrets secrets=getSecret();
-        return DataSourceBuilder
+        return (DataSource) DataSourceBuilder
                 .create()
-//                .driverClassName("com.mysql")
-                .url("")
+                .driverClassName("com.mysql.cj.jdbc.driver")
+                .url("jdbc:" + secrets.getEngine() + "://" + secrets.getHost() + ":" + secrets.getPort() + "/arnold")
                 .username(secrets.getUsername())
                 .password(secrets.getPassword())
                 .build();
@@ -71,3 +71,4 @@ public class AppConfig {
         return null;
     }
 }
+*/

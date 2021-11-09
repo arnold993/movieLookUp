@@ -37,6 +37,9 @@ public class Film {
 
     }
 
+    public Film(String title, String description, int year, int languageId, int duration, String rating) {
+    }
+
     public String getTitle() { return title;}
     public void  setTitle(String title) {this.title = title;}
 
