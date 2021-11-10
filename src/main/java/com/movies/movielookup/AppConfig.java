@@ -24,8 +24,7 @@ public class AppConfig {
     private String secretKey;
 
     private Gson gson = new Gson();
-
-
+    @Bean
     public DataSource dataSource (){
 
         AwsSecrets secrets=getSecret();
