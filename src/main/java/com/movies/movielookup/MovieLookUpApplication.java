@@ -29,22 +29,23 @@ public class MovieLookUpApplication {
 		return filmRepository.searchByTitle(title);
 	}
 //Used to add movies
-	@PostMapping("/addMovie")
-	public @ResponseBody
-	String addAMovie(
-					 @RequestParam int filmId,
-					 @RequestParam String title,
-					 @RequestParam String description,
-					 @RequestParam int yearOfRelease,
-					 @RequestParam int languageId,
-					 @RequestParam int duration,
-					 @RequestParam String rating) {
+@PostMapping("/addMovie")
+public @ResponseBody
+String addAMovie(
+		@RequestParam int filmId,
+		@RequestParam String title,
+		@RequestParam String description,
+		@RequestParam int yearOfRelease,
+		@RequestParam int languageId,
+		@RequestParam int duration,
+		@RequestParam String rating) {
 
 
-		Film savedFilm = new Film(filmId, title, description, yearOfRelease, languageId, duration, rating);
-		filmRepository.save(savedFilm);
-		return "New film added, thank you";
-	}
+	Film savedFilm = new Film(filmId, title, description, yearOfRelease, languageId, duration, rating);
+	filmRepository.save(savedFilm);
+	return "New film added, thank you";
+}
+
 
 //movie update
 	@PutMapping("/updateMovie")

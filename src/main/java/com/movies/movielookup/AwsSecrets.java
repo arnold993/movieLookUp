@@ -1,4 +1,4 @@
-package com.movies.movielookup;
+/*package com.movies.movielookup;
 
 import jdk.jfr.DataAmount;
 import lombok.AllArgsConstructor;
@@ -35,3 +35,5 @@ public String getPort(){return port;}
 public String getDbInstanceIdentifier(){return dbInstanceIdentifier;}
 
 }
+
+ */
