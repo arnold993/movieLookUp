@@ -1,6 +1,13 @@
-/*
 package com.movies.movielookup;
 
+import jdk.jfr.DataAmount;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class AwsSecrets {
     private String username;
     private String password;
@@ -28,5 +35,3 @@ public String getPort(){return port;}
 public String getDbInstanceIdentifier(){return dbInstanceIdentifier;}
 
 }
-
-*/

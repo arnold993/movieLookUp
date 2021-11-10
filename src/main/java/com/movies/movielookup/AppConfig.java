@@ -1,4 +1,3 @@
-/*
 package com.movies.movielookup;
 
 
@@ -24,25 +23,25 @@ public class AppConfig {
     @Value("${cloud.aws.credentials.secret-key}")
     private String secretKey;
 
+    private Gson gson = new Gson();
 
+    @Bean
     public DataSource dataSource (){
 
         AwsSecrets secrets=getSecret();
         return (DataSource) DataSourceBuilder
                 .create()
-                .driverClassName("com.mysql.cj.jdbc.driver")
-                .url("jdbc:" + secrets.getEngine() + "://" + secrets.getHost() + ":" + secrets.getPort() + "/arnold")
+ //               .driverClassName("com.mysql.cj.jdbc.driver")
+                .url("jdbc:" + secrets.getEngine() + "://" + secrets.getHost() + ":" + secrets.getPort() + "/sakila")
                 .username(secrets.getUsername())
                 .password(secrets.getPassword())
                 .build();
     }
 
-    private Gson gson = new Gson();
-
 
     private AwsSecrets getSecret() {
 
-        String secretName = "databaseAWS";
+        String secretName = "AWSdatabase";
         String region = "us-east-2";
 
 
@@ -71,4 +70,3 @@ public class AppConfig {
         return null;
     }
 }
-*/
