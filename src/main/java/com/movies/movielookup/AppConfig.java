@@ -25,13 +25,13 @@ public class AppConfig {
 
     private Gson gson = new Gson();
 
-    @Bean
+
     public DataSource dataSource (){
 
         AwsSecrets secrets=getSecret();
         return (DataSource) DataSourceBuilder
                 .create()
- //               .driverClassName("com.mysql.cj.jdbc.driver")
+                .driverClassName("com.mysql.cj.jdbc.Driver")
                 .url("jdbc:" + secrets.getEngine() + "://" + secrets.getHost() + ":" + secrets.getPort() + "/sakila")
                 .username(secrets.getUsername())
                 .password(secrets.getPassword())
