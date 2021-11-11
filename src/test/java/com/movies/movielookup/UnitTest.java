@@ -4,6 +4,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 //Getters tests
 public class UnitTest {
+
+    @Test
+    void testNewFilm(String title, String description, int year, int languageId, int duration, String rating){
+        Film newFilm = new Film("Zorro", "Wild west legend", 1988, 1, 88, "10");
+        assertEquals("Zorro");
+
+    }
     @Test
     void testMovieTitle(){
         Film titleOfMovie = new Film (1001, "Ironman, Age of Ultron","Ironman fights robots",2017,1,188,"PG");
@@ -95,4 +102,6 @@ public class UnitTest {
         filmRating.setRating("PG");
         assertEquals("PG","PG",filmRating.getRating());
     }
+
+
 }

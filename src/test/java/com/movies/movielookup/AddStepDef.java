@@ -13,22 +13,22 @@ import static org.junit.Assert.assertEquals;
 public class AddStepDef {
 
     @Autowired
-    private FilmRepository film;
+    private FilmRepository filmRepository;
     private Film newFilm;
 
-    @Given("The movie I want to add is named {string}")
-    public void theMovieIWantToAddIsNamed(String title) {
+    @Given("I know the name of the film")
+    public void iKnowTheNameOfTheFilm() {
     }
 
     @When("I add the movie with film id {int}, title {string}, description {string}, year {int}, language id {int}, duration {int},  rating {string}")
     public void iAddTheNewMovie(int filmId, String title, String description, int year, int languageId, int duration, String rating) {
         newFilm = new Film(filmId, title, description, year, languageId, duration, rating);
-        film.save(newFilm);
+        filmRepository.save(newFilm);
     }
 
-    @Then("The new movie should be called {string}")
+    @Then("The movie {string} should appear in the database")
     public void theNameOfTheMovie(String actualFilmTitle) {
-        assertEquals(film.searchByTitle(newFilm.getTitle()).get(0).getTitle(), actualFilmTitle);
+        assertEquals(filmRepository.searchByTitle(newFilm.getTitle()).get(0).getTitle(), actualFilmTitle);
     }
 // FAIL SCENARIO
     @Given("the film id has not been given")
@@ -46,5 +46,6 @@ public class AddStepDef {
         assertEquals(0,newFilm.getFilmId());
         return "Film Id missing, please add the ID";
     }
+
 
 }

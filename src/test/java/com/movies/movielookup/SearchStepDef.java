@@ -3,9 +3,9 @@ package com.movies.movielookup;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -18,22 +18,25 @@ public class SearchStepDef {
     @Autowired
     private FilmRepository filmRepository;
     private Film film;
-
     private List<Film> answer;
+    private String filmTitle;
 
-    @Given("that i am on the search page")
-    public void isAvailable() {;
+    @Given("the movie {string} is available")
+    public void theMovieIsAvailable(String title) {
+
     }
 
-    @When("I search for {string}" )
-    public void iSearchForMovie (String title) {
+    @When("I search for {string}")
+    public void iSearchFor(String title) {
         answer = filmRepository.searchByTitle(title);
     }
 
-    @Then("I should be told {string} is available")
-    public Film iShouldBeTold(String title) {
-        assertEquals(answer.get(0).getTitle(), title);
-        return answer.get(0);
+    @Then("The movie should appear in the results")
+    public void theMovieShouldAppearInTheResults() {
+        filmTitle = "CIDER DESIRE";
+        assertEquals(answer.get(0).getTitle(), filmTitle);
+//        return answer.get(0);
     }
+
 
 }

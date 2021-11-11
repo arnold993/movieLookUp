@@ -32,7 +32,7 @@ public class MovieLookUpApplication {
 @PostMapping("/addMovie")
 public @ResponseBody
 String addAMovie(
-		@RequestParam int filmId,
+//		@RequestParam int filmId,
 		@RequestParam String title,
 		@RequestParam String description,
 		@RequestParam int yearOfRelease,
@@ -41,7 +41,7 @@ String addAMovie(
 		@RequestParam String rating) {
 
 
-	Film savedFilm = new Film(filmId, title, description, yearOfRelease, languageId, duration, rating);
+	Film savedFilm = new Film(title, description, yearOfRelease, languageId, duration, rating);
 	filmRepository.save(savedFilm);
 	return "New film added, thank you";
 }

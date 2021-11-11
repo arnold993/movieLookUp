@@ -1,4 +1,4 @@
-/*package com.movies.movielookup;
+package com.movies.movielookup;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -26,17 +26,14 @@ public class UpdateStepDef {
 
     @When("I update the description of the movie with title {string} to {string}")
     public void iUpdateTheMovie(String title, String description) {
-        String newFilm = film.searchByTitle(title).get();
-        newFilm.SetDescription(description);
+        Film newFilm = film.searchByTitle(title).get(1000);
+        newFilm.setDescription(description);
         film.save(newFilm);
-
-
 
     }
 
     @Then("the movie {string} should the description changed to {string}")
     public void theMovieShouldTheDescriptionChangedTo(String title, String description) {
-        assertEquals(film.searchByTitle(title).get().getDescription(),description);
+        assertEquals(film.searchByTitle(title).get(1000).getDescription(),description);
     }
 }
-*/
